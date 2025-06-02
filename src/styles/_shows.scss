@@ -10,6 +10,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
+        @media (max-width:768px) {
+            grid-template-columns: 1fr 1fr
+
+        }
+
         &--is-active {
             display: grid;
             }
@@ -27,8 +32,14 @@
         display: flex;
         justify-content: center;
 
+        @media (max-width:768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 20px;
+        }
+
         &__button {
-            color: variaveis.$textSecundaryColor;
+            color: variaveis.$textSecondaryColor;
             font-size: 20px;
             border: none;
             border-bottom: 5px solid transparent;
@@ -39,9 +50,13 @@
             cursor: pointer;
 
             &--is-active {
-                border-color: variaveis.$textSecundaryColor;
+                border-color: variaveis.$textSecondaryColor;
             }
-            
+
+            @media (max-width:768px) {
+                font-size: 16px;
+            }
+                    
         }
     }
 }
